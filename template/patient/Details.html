@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+</head>
+<body>
+<div class="col-6 offset">
+    <div class="card">
+        <div class="card-header" ><h1 class="card-header">Patient Details</h1></div>
+        <div class="'card-body">
+            <p class="card.text">
+                {% for x in data %}
+                <img src="{{x.Picture.url}}" alt="" height="370px" width="420px">
+                <h2>Frist-Name  :{{x.first_name}}</h2>
+                <h2>Last-Name    :{{x.last_name}}</h2>
+                <h2>Email-Id     :{{x.Email_id}}</h2>
+                <h2>Address      :{{x.line_1}} {{x.city}} {{x.state}} {{x.pincode}}</h2>
+
+                {% endfor %}
+
+            </p>
+        </div>
+
+    </div>
+</div>
+    
+</body>
+</html>
